@@ -13,6 +13,19 @@ axios.get("https://hydeparkwinterwonderland.com/faqs/").then(
 
         console.log("Question => ", $(question).text());
         console.log("\n");
+
+        const answerBlocks = $(el)
+          .children("div.col-sm-12")
+          .children("div.collapse")
+          .children("div.pb-3")
+          .children("p");
+
+        answerBlocks.each((idx, elem) => {
+          console.log("Answer: \n", $(elem).text());
+        });
+        console.log("\n");
+        console.log("-----");
+        console.log("\n");
       });
     }
   },
